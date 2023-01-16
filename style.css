@@ -433,7 +433,7 @@ body{
 }
 @media(max-width: 425px){
     .header img{
-        width: 25vw;
+        width: 24vw;
         margin-top: 5px;
     }
     .header h1{
