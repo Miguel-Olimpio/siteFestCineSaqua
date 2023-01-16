@@ -1,0 +1,477 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "wallpaper wallpaper"
+    "video video"
+    "titulo1 titulo1"
+    "filmes filmes"
+    "titulo2 titulo2"
+    "premiação premiação"
+    "titulo3 titulo3"
+    "festival festival"
+    "programação programação"
+    "titulo4 titulo4"
+    "inscrição inscrição"
+    "titulo5 titulo5"
+    "driveIn driveIn"
+    "titulo6 titulo6"
+    "encontros encontros"
+    "titulo7 titulo7"
+    "quemSomos quemSomos"
+    "titulo8 titulo8"
+    "parceirias parceirias"
+    "titulo9 titulo9"
+    "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.6rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+/* Titulos */
+
+.titulo1 {
+    grid-area: titulo1;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo1 h1 strong{
+    font-weight: 700;
+}
+
+.titulo2 {
+    grid-area: titulo2;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo2 h1 strong{
+    font-weight: 700;
+}
+.titulo3 {
+    grid-area: titulo3;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo3 h1 strong{
+    font-weight: 700;
+}
+.titulo4 {
+    grid-area: titulo4;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo4 h1 strong{
+    font-weight: 700;
+}
+.titulo5 {
+    grid-area: titulo5;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo5 h1 strong{
+    font-weight: 700;
+}
+.titulo6 {
+    grid-area: titulo6;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo6 h1 strong{
+    font-weight: 700;
+}
+.titulo7 {
+    grid-area: titulo7;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo7 h1 strong{
+    font-weight: 700;
+}
+.titulo8 {
+    grid-area: titulo8;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo8 h1 strong{
+    font-weight: 700;
+}
+.titulo9 {
+    grid-area: titulo9;
+    background-color:#F8F8FF;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo9 h1 strong{
+    font-weight: 700;
+}
+/* Header */
+
+.header{
+    grid-area: header;
+    background-color:#F8F8FF;
+}
+
+.header h1 strong{
+    font-weight: 700;
+}
+
+.header .header-container{
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+}
+
+.hearde h1{
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.header a:hover h1{
+    color: dimgray ;
+}
+
+
+/* Wallpaper */
+
+.wallpaper{
+    grid-area: wallpaper;
+    background: url('images/historia-do-cinema-og.jpg') center center no-repeat;
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+}
+
+.wallpaper:after{
+    content: url(images/seta-branca.png);
+    height: 35px;
+    bottom: 40px;
+    right: 50%;
+    position: absolute;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes downarrow {
+    0% {-webkit-transform: translateY(0); opacity: 0.4; }
+    100% {-webkit-transform: translateY(0.6em); opacity: 0.9;}
+}
+
+/* Video */
+
+.video{
+    grid-area: video;
+    width: 100vw;    
+}
+.video iframe{
+    height: 85vh;
+    width: 100vw;
+}
+
+/* Filmes */
+
+.filmes{
+    grid-area: filmes;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F8F8FF ;
+    position: relative;
+}
+.filmes .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000;
+}
+.filmes .info strong{
+    font-weight: 700;
+}
+.filmes .info h3{
+    margin: 15px;
+}
+.filmes .info p{
+    margin: 15px;
+}
+
+.filmes .movie.right iframe{
+    width: 50vw;
+    height: 50vh;
+}
+.filmes .movie.left iframe{
+    width: 50vw;
+    height: 50vh;
+}
+
+/* Premiação */
+
+.premiação{
+    grid-area: premiação;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F8F8FF ;
+    position: relative;
+}
+
+.premiação .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000;
+}
+
+.premiação .image.right{
+    background: url('images/historiadocinemaaliceguy-0-cke.jpg')center center no-repeat;
+    background-size:cover;
+    height: 50vh;
+}
+.premiação .image.left{
+    background: url('images/historiadocinemapraxinoscope-cke.jpg')center center no-repeat;
+    background-size:cover;
+    height: 50vh;
+}
+
+.premiação .info h3{
+    margin: 15px ;
+}
+
+.premiação .info p{
+    margin: 15px;
+}
+
+.premiação .info strong{
+    font-weight: 700;
+}
+
+/* Festival */
+
+.festival{
+    grid-area: festival;
+    background-color: #F8F8FF ;
+}
+
+.festival .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.festival .intro iframe{
+    width: 80vw;
+    height: 60vh;
+}
+.festival .intro p{
+    margin: 30px;
+}
+.festival .juristas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.festival .juristas h2 strong{
+    font-weight: 700;
+}
+.festival .juristas p{
+    margin-bottom: 30px;
+    margin: 30px;
+}
+.festival .juristas p strong{
+    font-weight: 700;
+}
+
+/* Programação */
+
+.programação{
+    grid-area: programação;
+    background-color: #F8F8FF ;
+}
+
+/* Inscrição */
+
+.inscrição{
+    grid-area: inscrição;
+}
+
+/* Drive In */
+
+.driveIn{
+    grid-area: driveIn;
+    background-color:#F8F8FF;
+    display: flex;
+    justify-content: center;
+}
+
+/* Encontros */
+
+.encontros{
+    grid-area: encontros;
+    background-color:#F8F8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.encontros h2{
+    margin: 15px;
+    text-align: center;
+}
+.encontros h2 strong{
+    font-weight: 500;
+}
+.encontros p{
+    margin: 15px;    
+}
+.encontros p strong{
+    font-weight: 500;
+}
+
+.encontros button{
+    background-color: #7b8084;
+    font-size: 1.6rem;
+    box-shadow: 3px 3px 3px #000;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;;
+    margin:10px ;
+}
+.encontros button:hover{
+    cursor: pointer;
+}
+/* Quem somos */
+
+.quemSomos{
+    grid-area: quemSomos;
+    background-color:#F8F8FF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+.quemSomos p{
+    margin: 30px;
+}
+.quemSomos img{
+    margin: 30px;
+}
+
+/* Parcerias */
+
+.parceirias{
+    grid-area: parceirias;
+    background-color:#F8F8FF;
+    display: flex;
+    justify-content: center;
+}
+.parceirias .img{
+    background: url('images/parceirias2.png')center center no-repeat;
+    height: 50vh;
+    width: 60vw;
+}
+
+/* footer */
+
+.footer{
+    grid-area: footer;
+    background-color:#F8F8FF;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.footer h2 strong{
+    font-weight: 500;
+}
+.footer .social a i{
+    padding: 30px;
+    font-size: 3rem;
+}
+.footer .social .facebook i:hover{
+    color: #3b5998;
+    transition: 0.3s;
+}
+.footer .social .whats i:hover{
+    color: #34af23;
+    transition: 0.3s;
+}
+.footer .social .twitter i:hover{
+    color: #00aced;
+    transition: 0.3s;
+}
+.footer .social .insta i:hover{
+    color: pink;
+    transition: 0.3s;
+}
+@media(max-width: 425px){
+    .header h1{
+        font-size: 2.4rem;
+    }   
+    .wallpaper{
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .video iframe{
+        height: 50vh;
+        width: 100vw;       
+    }
+    .filmes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .filmes .movie.right iframe{
+        width: 100vw;
+    }
+    .filmes .movie.left iframe{
+        width: 100vw;
+    }
+    .premiação{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .quemSomos{
+        grid-template-columns: 1fr;
+    }
+    .parceirias .img{
+        background: url('images/parceirias.png')center center no-repeat;
+        width: 100vw;
+        height: 80vh;
+    }
+    .footer .social .facebook i{
+        color: #3b5998;
+    }
+    .footer .social .whats i{
+        color: #34af23;
+    }
+    .footer .social .twitter i{
+        color: #00aced;
+    }
+    .footer .social .insta i{
+        color: pink;
+    }
+}
+
